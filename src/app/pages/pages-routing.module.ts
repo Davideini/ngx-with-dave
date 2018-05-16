@@ -9,15 +9,15 @@ const routes: Routes = [
     path: 'modals',
     loadChildren: 'app/pages/modals/modals.module#ModalsModule'
   },
-  { path: 'todos', loadChildren: 'app/pages/todos/todos.module#TodosModule' },
-  {
-    path: 'material',
-    loadChildren: 'app/pages/material/material.module#MaterialModule'
-  },
-  {
-    path: 'bootstrap',
-    loadChildren: 'app/pages/bootstrap/bootstrap.module#BootstrapModule'
-  }
+  { path: 'todos', loadChildren: 'app/pages/todos/todos.module#TodosModule' }
+  // {
+  //   path: 'material',
+  //   loadChildren: 'app/pages/material/material.module#MaterialModule'
+  // },
+  // {
+  //   path: 'bootstrap',
+  //   loadChildren: 'app/pages/bootstrap/bootstrap.module#BootstrapModule'
+  // }
 ];
 
 @NgModule({
