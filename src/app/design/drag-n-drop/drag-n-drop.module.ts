@@ -5,6 +5,7 @@ import { DragNDropDirective } from './drag-n-drop.directive';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [DragNDropComponent, DragNDropDirective]
+  declarations: [DragNDropComponent, DragNDropDirective],
+  exports: [DragNDropComponent, DragNDropDirective]
 })
 export class DragNDropModule {}
