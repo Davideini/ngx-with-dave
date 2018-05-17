@@ -50,7 +50,6 @@ const {
 
 
 
-
 http.get("www.google.com").pipe(
     map(resp => resp.result),
     switchMap(result =>
@@ -68,4 +67,32 @@ http.get("www.google.com").pipe(
     catchError(err => Observable.of("123")),
     tap(console.log)
   )
+  .subscribe();
+
+
+
+http.get = (url) => new Promise((resolve, reject) => {
+  console.log(url);
+
+  setTimeout(() => {
+    // reject("sdajhdoiasdodsaij");
+
+    resolve({
+      statusCode: 200,
+      result: [
+        1, 2, 4, 9
+      ]
+    });
+  }, 1000)
+});
+
+Observable.fromPromise(http.get("www.google.com"))
+
+  .map(resp => {
+    console.log(resp);
+    return 987;
+  })
+  .map(a => console.log(a))
+  .catch(err => console.warn(err))
+
   .subscribe();
