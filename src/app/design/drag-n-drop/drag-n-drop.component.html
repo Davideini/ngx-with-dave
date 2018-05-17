@@ -1,3 +1,9 @@
-<p>
-  drag-n-drop works!
+<p *ngIf="!files || !files.length">
+  Drag here files!
 </p>
+
+<div *ngFor="let file of files">
+
+  <label [innerText]="file.name"></label>
+
+</div>

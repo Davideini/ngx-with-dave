@@ -2,6 +2,6 @@
   drag-n-drop-page works!
 </p>
 
-<app-drag-n-drop appDragNDrop>
+<app-drag-n-drop [appDragNDrop]="ignore" [files]="files" (filesAdd)="files = $event">
 
 </app-drag-n-drop>

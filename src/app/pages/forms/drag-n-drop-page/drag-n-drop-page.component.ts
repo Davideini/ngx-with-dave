@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drag-n-drop-page.component.scss']
 })
 export class DragNDropPageComponent implements OnInit {
+  files: File[] = [];
 
-  constructor() { }
+  ignore: RegExp = /\.json/i;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  onFilesAdd(files: File[]) {
+    this.files = files;
   }
-
 }
