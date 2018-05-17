@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragNDropDirective } from './drag-n-drop.directive';
+import { DragNDropComponent } from './drag-n-drop.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [DragNDropDirective]
+  declarations: [DragNDropComponent]
 })
-export class DesignModule { }
+export class DragNDropModule { }
