@@ -1,0 +1,9 @@
+:host {
+  background: red;
+  display: block;
+  border: 1px solid black;
+  &.over {
+    background: green;
+    border-style: dashed;
+  }
+}
